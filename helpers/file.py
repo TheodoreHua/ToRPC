@@ -22,7 +22,8 @@ default_settings = {
         'show_post': True,
         'show_post_url': True,
         'show_join': True
-    }
+    },
+    'update_check': True
 }
 
 def check_dict(d: dict, expected: dict, fixed_dict=None) -> Union[bool, dict]:

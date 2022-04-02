@@ -4,4 +4,4 @@
 #  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 # ------------------------------------------------------------------------------
 
-from .file import assert_data, load_settings
+VERSION = '1.0.0'
