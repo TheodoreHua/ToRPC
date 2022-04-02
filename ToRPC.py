@@ -17,7 +17,15 @@ from tkinter.messagebox import askyesno
 from helpers import *
 from helpers.gvars import VERSION, TITLE_REGEX
 
-assert_data()
+def close_program(msg):
+    print(msg)
+    input('Press any key to exit...')
+    exit()
+
+
+if assert_data():
+    close_program('Data created, check the settings file please')
+
 settings = load_settings()
 
 if settings['update_check']:
@@ -40,13 +48,9 @@ try:
     reddit = praw.Reddit(client_id=settings['reddit']['client_id'], client_secret=settings['reddit']['client_secret'],
                          user_agent="ToRPC v{} by /u/--B_L_A_N_K--".format(VERSION))
 except MissingRequiredAttributeException as e:
-    print('Missing required Reddit Authentication Attribute:', str(e))
-    input('Press any key to exit...')
-    exit()
+    close_program('Missing required Reddit Authentication Attribute: ' + str(e))
 if reddit is None:
-    print('Failed Reddit auth')
-    input('Press any key to exit...')
-    exit()
+    close_program('Failed Reddit auth')
 
 rpc = Presence(settings['discord']['client_id'])
 rpc.connect()
