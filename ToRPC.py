@@ -23,7 +23,7 @@ def close_program(msg):
     exit()
 
 
-if assert_data():
+if not assert_data():
     close_program('Data created, check the settings file please')
 
 settings = load_settings()
