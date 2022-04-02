@@ -60,7 +60,7 @@ while True:
     post = find_post(reddit, settings)
     if post is None:
         rpc_kwargs = {
-            'details': "Making the internet a more accessible place",
+            'details': settings['rpc_settings']['details'],
             'large_image': 'grafeaslogo',
             'small_image': 'idle',
             'start': start_time,
@@ -75,7 +75,7 @@ while True:
             continue
         crosspost = post.url
         rpc_kwargs = {
-            'details': "Making the internet a more accessible place",
+            'details': settings['rpc_settings']['details'],
             'large_image': reddit.subreddit(r.group('subreddit')).icon_img,
             'large_text': r.group('subreddit'),
             'small_image': r.group('type').lower(),
