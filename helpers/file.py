@@ -13,17 +13,40 @@ import yaml
 default_settings = {
     'reddit': {
         'client_id': '',
-        'client_secret': ''
+        'client_secret': '',
+        'username': 'your-username-here'
     },
     'discord': {
-        'client_id': ''
+        'client_id': '959879656532754483'  # Application with proper assets, only change if you know what you're doing
     },
     'rpc_settings': {
         'show_post': True,
         'show_post_url': True,
         'show_join': True
     },
-    'update_check': True
+    'phrases': {
+        'claims': [
+            'claim',
+            'dibs',
+            'clai',
+            'caim',
+            'clam'
+        ],
+        'dones': [
+            'done',
+            'deno',
+            'doen',
+            'dome',
+            'doone'
+        ],
+        'unclaims': [
+            'unclaim',
+            'cancel',
+            'unclaim'
+        ]
+    },
+    'update_check': True,
+    'cdr_mode': False
 }
 
 def check_dict(d: dict, expected: dict, fixed_dict=None) -> Union[bool, dict]:

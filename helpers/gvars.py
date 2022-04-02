@@ -4,4 +4,7 @@
 #  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 # ------------------------------------------------------------------------------
 
+from re import compile
+
 VERSION = '1.0.0'
+TITLE_REGEX = compile(r"(?P<subreddit>.*) \| (?P<type>(Gallery|Image|Audio|Video|Other)) \| \"(?P<title>.*)\"")
