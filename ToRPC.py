@@ -63,6 +63,7 @@ while True:
             'details': settings['rpc_settings']['details'],
             'large_image': 'grafeaslogo',
             'small_image': 'idle',
+            'small_text': 'Idling',
             'start': start_time,
             'buttons': [],
             'instance': False
@@ -73,7 +74,7 @@ while True:
             print("Error reading title: ", post.title)
             sleep(15)
             continue
-        crosspost = post.url
+        crosspost = reddit.submission(url=post.url)
         rpc_kwargs = {
             'details': settings['rpc_settings']['details'],
             'large_image': reddit.subreddit(r.group('subreddit')).icon_img,

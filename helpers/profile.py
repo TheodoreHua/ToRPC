@@ -9,6 +9,5 @@ def find_post(reddit, settings):
         if comment.body in settings['phrases']['dones']:
             return None
         if comment.body in settings['phrases']['claims']:
-            if comment.subreddit.name.casefold() == 'transcribersofreddit' and \
-                    comment.submission.author.name.casefold() == 'transcribersofreddit':
+            if comment.subreddit.name == 't5_3jqmx':
                 return comment.submission

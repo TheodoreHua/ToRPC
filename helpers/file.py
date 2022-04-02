@@ -20,7 +20,7 @@ default_settings = {
         'client_id': '959879656532754483'  # Application with proper assets, only change if you know what you're doing
     },
     'rpc_settings': {
-        'details': 'Making Reddit a more accessible place',
+        'details': 'Making Reddit more accessible',
         'show_post': True,
         'show_post_url': True,
         'show_join': True
