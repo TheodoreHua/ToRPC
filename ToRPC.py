@@ -77,7 +77,7 @@ while True:
         crosspost = reddit.submission(url=post.url)
         rpc_kwargs = {
             'details': settings['rpc_settings']['details'],
-            'large_image': reddit.subreddit(r.group('subreddit')).icon_img,
+            'large_image': crosspost.subreddit.icon_img,
             'large_text': r.group('subreddit'),
             'small_image': r.group('type').lower(),
             'small_text': r.group('type'),
@@ -85,6 +85,8 @@ while True:
             'buttons': [],
             'instance': False
         }
+        if rpc_kwargs['large_image'] == '':
+            rpc_kwargs['large_image'] = 'reddit'
         if not crosspost.over_18 and r.group('type') == 'Image':
             rpc_kwargs['small_image'] = rpc_kwargs['large_image']
             rpc_kwargs['small_text'] = rpc_kwargs['large_text']

@@ -6,7 +6,7 @@
 
 def find_post(reddit, settings):
     for comment in reddit.redditor(settings['reddit']['username']).comments.new(limit=20):
-        if comment.body in settings['phrases']['dones']:
+        if comment.body in settings['phrases']['dones'] or comment.body in settings['phrases']['unclaims']:
             return None
         if comment.body in settings['phrases']['claims']:
             if comment.subreddit.name == 't5_3jqmx':
