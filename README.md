@@ -1,5 +1,5 @@
 # ToRPC
-[![Inactively Maintained](https://img.shields.io/badge/Maintenance%20Level-Inactively%20Maintained-yellow.svg)](https://github.com/TheodoreHua/MaintenanceLevels#inactively-maintained)
+[![Abandoned](https://img.shields.io/badge/Maintenance%20Level-Abandoned-red.svg)](https://github.com/TheodoreHua/MaintenanceLevels#abandoned)
 [![pypresence](https://img.shields.io/badge/using-pypresence-00bb88.svg?logo=discord&logoWidth=20)](https://github.com/qwertyquerty/pypresence)
 
 ToRPC is a Discord Rich Presence application designed for [r/TranscribersOfReddit](https://reddit.com/r/TranscribersOfReddit)
